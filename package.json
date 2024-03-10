@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "14.x",
+  },
   "scripts": {
     "test": "cross-env NODE_ENV=test jest --testTimeout=5000",
     "build": "tsc -b",
