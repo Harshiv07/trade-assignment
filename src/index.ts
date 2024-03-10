@@ -7,11 +7,7 @@ import { setupRoutes } from "./routes";
 const app = express();
 
 app.use(bodyParser.json());
-app.use(
-  cors({
-    origin: "https://trade-orderbook-api.vercel.app/",
-  })
-);
+app.use(cors());
 
 setupSwagger(app);
 setupRoutes(app);
