@@ -12,7 +12,7 @@ export const setupSwagger = (app: any) => {
       },
       servers: [
         {
-          url: "http://localhost:3000/",
+          url: "https://trade-orderbook-api.vercel.app/",
         },
       ],
       paths: {
