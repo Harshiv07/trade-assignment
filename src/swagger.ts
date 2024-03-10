@@ -112,21 +112,10 @@ export const setupSwagger = (app: any) => {
         },
       },
     },
-    apis: ["./routes.ts"],
+    apis: ["./*.ts"],
   };
 
   const swaggerDocs = swaggerJsDoc(swaggerOptions);
-  const CSS_URL =
-    "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.0.0/swagger-ui.min.css";
-  const JS_URL =
-    "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.0.0/swagger-ui-bundle.js";
 
-  app.use(
-    "/api-docs",
-    swaggerUi.serve,
-    swaggerUi.setup(swaggerDocs, {
-      customCssUrl: CSS_URL,
-      swaggerOptions: { urls: [{ url: JS_URL, name: "Swagger UI Bundle" }] },
-    })
-  );
+  app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 };
