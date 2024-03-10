@@ -1,4 +1,4 @@
-import { app } from "../";
+import app from "../";
 import { TICKER } from "../routes";
 import request from "supertest";
 

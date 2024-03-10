@@ -1,4 +1,4 @@
-import { app } from "../";
+import app from "../";
 import request from "supertest";
 
 describe("Can create a bid", () => {

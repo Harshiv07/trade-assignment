@@ -4,7 +4,7 @@ import cors from "cors";
 import { setupSwagger } from "./swagger";
 import { setupRoutes } from "./routes";
 
-export const app = express();
+const app = express();
 
 app.use(bodyParser.json());
 app.use(
@@ -19,3 +19,5 @@ setupRoutes(app);
 app.listen(process.env.PORT || 3000, () =>
   console.log("Server running on port 3000")
 );
+
+export default app;
